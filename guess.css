@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: dmsans;
+  src: url(/DM_Sans/static/DMSans_36pt-Regular.ttf);
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, purple, rgba(114, 73, 143, 0.877));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: dmsans, sans-serif, "Gill Sans";
+}
+
+.container {
+  background: rgba(216, 211, 211, 0.74);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+}
+
+.container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content label {
+  color: rgba(0, 0, 0, 0.616);
+}
+
+.content input {
+  border-radius: 0.1rem;
+  width: 25%;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid purple;
+  text-align: center;
+}
+
+.content button {
+  border-radius: 0.2rem;
+  width: 40%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: purple;
+  padding: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.content button:active {
+  background: rgba(226, 223, 223, 0.425);
+  color: black;
+}
+
+.result{
+    font-size: larger;
+    font-weight: bold;
+}
