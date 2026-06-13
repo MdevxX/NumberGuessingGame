@@ -64,6 +64,10 @@ body {
   color: black;
 }
 
+.reset{
+    display: none;
+}
+
 .result{
     font-size: larger;
     font-weight: bold;

@@ -1,5 +1,6 @@
 const numberEl = document.getElementById("number");
 const guessBtn = document.getElementById("guess-btn");
+const resetBtn = document.querySelector(".reset");
 const resultMsg = document.querySelector(".result");
 
 function computerChoice() {
@@ -10,9 +11,6 @@ function computerChoice() {
 let numberOfTrials = 0;
 
 // console.log(computerChoiceSaved);
-function reset(){
-    
-}
 
 guessBtn.addEventListener("click", () => {
   let computerChoiceSaved = computerChoice();
@@ -23,11 +21,19 @@ guessBtn.addEventListener("click", () => {
   }
   numberOfTrials++;
   if (ogNumber === computerChoiceSaved) {
-    numberEl.value = "";
     resultMsg.textContent = `You Got it Right! in ${numberOfTrials} tries`;
-    numberOfTrials = 0;
+    resetBtn.style.display = "block";
+    guessBtn.style.display = "none";
   } else {
     numberEl.value = "";
     resultMsg.textContent = `Try Again! ${numberOfTrials} tries`;
   }
+});
+
+resetBtn.addEventListener("click", () => {
+  numberEl.value = "";
+  numberOfTrials = 0;
+  resultMsg.textContent = "";
+  resetBtn.style.display = "none";
+  guessBtn.style.display = "block";
 });
