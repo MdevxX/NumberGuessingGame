@@ -10,10 +10,9 @@ function computerChoice() {
 
 let numberOfTrials = 0;
 
-// console.log(computerChoiceSaved);
+let computerChoiceSaved = computerChoice();
 
 guessBtn.addEventListener("click", () => {
-  let computerChoiceSaved = computerChoice();
   let ogNumber = Number(numberEl.value);
   if (numberEl.value === "") {
     alert("Please input a Valid Number");
@@ -36,4 +35,5 @@ resetBtn.addEventListener("click", () => {
   resultMsg.textContent = "";
   resetBtn.style.display = "none";
   guessBtn.style.display = "block";
+  computerChoiceSaved = computerChoice();
 });
